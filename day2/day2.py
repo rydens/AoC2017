@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import math
+
+
 string = '''790	99	345	1080	32	143	1085	984	553	98	123	97	197	886	125	947
 302	463	59	58	55	87	508	54	472	63	469	419	424	331	337	72
 899	962	77	1127	62	530	78	880	129	1014	93	148	239	288	357	424
@@ -16,8 +19,18 @@ string = '''790	99	345	1080	32	143	1085	984	553	98	123	97	197	886	125	947
 8447	203	1806	6777	278	2850	1232	6369	398	235	212	992	7520	7304	7852	520
 3928	107	3406	123	2111	2749	223	125	134	146	3875	1357	508	1534	4002	4417'''
 
-
+checksum = 0
 
 string = list(string.split())
-print(string)
+print('Length: ' + str(len(string)))
+print('Coloumn Length: ' + str(int(math.sqrt(len(string)))))
 
+string = [ int(x) for x in string ]
+
+for count in range(int(math.sqrt(len(string)))):
+    tempstring = string[0:16]
+    tempnum = max(tempstring) - min(tempstring)
+    checksum += tempnum
+    del string[0:16]
+
+print('Checksum: ' + str(checksum))
