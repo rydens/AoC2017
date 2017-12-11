@@ -30,10 +30,17 @@ string = [ int(x) for x in string ]
 for count in range(int(math.sqrt(len(string)))):
     tempstring = string[0:16]
     count = 0
-    for i in tempstring:
-        for q in tempstring:
-            if i % q == 0:
-                count += i / q
+    for i in range(16):
+        tempitem = tempstring[0]
+        for m in range(16-i):
+            tempitem2 = tempstring[m]
+            if tempitem == tempitem2:
+                pass
+            elif tempitem % tempitem2 == 0:
+                checksum += int(tempitem/tempitem2)
+            elif tempitem2 % tempitem == 0:
+                checksum += int(tempitem2/tempitem)
+        del tempstring[0]
     del string[0:16]
 
 print('Checksum: ' + str(checksum))
