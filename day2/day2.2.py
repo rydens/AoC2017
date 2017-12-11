@@ -31,8 +31,9 @@ for count in range(int(math.sqrt(len(string)))):
     tempstring = string[0:16]
     count = 0
     for i in tempstring:
-        newtempstring = 
-    checksum += tempnum
+        for q in tempstring:
+            if i % q == 0:
+                count += i / q
     del string[0:16]
 
 print('Checksum: ' + str(checksum))
