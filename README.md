@@ -1,5 +1,5 @@
 # adventofcode
-My solutions for Advent of Code 2017 & 2018. I got bored.
+My solutions for Advent of Code. I got bored.
 
 My given inputs are still there, and I used a bunch of stack overflow,
 but I didn't cheat... :)
