@@ -1,4 +1,4 @@
-inputfile = open('input.txt', 'r')
+inputfile = open('testinput.txt', 'r')
 wire1 = inputfile.readline().strip().split(',')
 wire2 = inputfile.readline().strip().split(',')
 
@@ -59,7 +59,7 @@ for coord in wire1coords:
 
 print('computing Manhattan distance...')
 for i in range(len(intersects)):
-    intersects[i] = int(intersects[i].split(',')[0]) + int(intersects[i].split(',')[1])
+    intersects[i] = abs(int(intersects[i].split(',')[0])) + abs(int(intersects[i].split(',')[1]))
 
 print('finding smallest distance...')
 lowest = intersects[0]
