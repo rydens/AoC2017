@@ -1,0 +1,2 @@
+# day 2, part 2: I just had to see how small and awful I could make it; this works!
+print([1 for line in open('input.txt', 'r')if((line.split()[2][int(line.split()[0].split('-')[0])-1]==line.split()[1][0]or line.split()[2][int(line.split()[0].split('-')[1])-1]==line.split()[1][0])and((line.split()[2][int(line.split()[0].split('-')[0])-1]==line.split()[1][0])!=(line.split()[2][int(line.split()[0].split('-')[1])-1]==line.split()[1][0])))].count(1))
